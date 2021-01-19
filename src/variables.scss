@@ -1,0 +1,101 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+// Screen Variables
+$screen-extra-small: "(max-width: 374px)";
+$screen-small: "(min-width: 600px)";
+$screen-medium: "(min-width: 800px)";
+$screen-large: "(min-width: 1000px)";
+$screen-extra-large: "(min-width: 1200px)";
+
+// Font Variables
+$font-family-normal: "Alata", sans-serif;
+$font-family-special: "Josefin Sans", sans-serif;
+$font-size-normal: 15px;
+$font-weight-normal: 400;
+$font-weight-special: 300;
+
+// Color Variables
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-dark-gray: hsl(0, 0%, 55%);
+$color-very-dark-gray: hsl(0, 0%, 41%);
+
+// Animations
+@keyframes rotate {
+  0% {
+    transform: scaleX(1);
+  }
+
+  45% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0);
+  }
+
+  55% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes reveal-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-vertical-1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-horizontal-1 {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-horizontal-2 {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  33.334% {
+    transform: scaleX(1);
+    opacity: 0.334;
+  }
+
+  66.667% {
+    transform: scaleX(0);
+    opacity: 0.667;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}

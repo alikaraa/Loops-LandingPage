@@ -1,0 +1,67 @@
+@import "../../variables.scss";
+
+.creation-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 96px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.5s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: 0.5s;
+  }
+
+  &:hover::after {
+    background-color: hsla(0, 0%, 100%, 0.7);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media #{$screen-medium} {
+    height: 320px;
+  }
+
+  &--animate {
+    animation-name: reveal-horizontal-1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    @media #{$screen-medium} {
+      animation-name: reveal-vertical-1;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    width: 50%;
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    color: $color-white;
+    z-index: 2;
+    transition: 0.5s;
+
+    @media #{$screen-medium} {
+      width: 75%;
+      font-size: 2rem;
+    }
+  }
+
+  &:hover &__heading {
+    color: $color-black;
+  }
+}

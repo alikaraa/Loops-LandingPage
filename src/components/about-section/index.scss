@@ -1,0 +1,124 @@
+@import "../../variables.scss";
+
+.about {
+  height: 80vh;
+  min-height: 600px;
+
+  @media #{$screen-medium} {
+    height: 100vh;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    height: 100%;
+    padding: 32px 0px;
+
+    @media #{$screen-small} {
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+    }
+
+    @media #{$screen-medium} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 64px 0px;
+    }
+
+    @media #{$screen-large} {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  &__image {
+    grid-row: 1 / 2;
+    background-image: url("../../images/mobile/image-interactive.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    opacity: 0;
+
+    @media #{$screen-small} {
+      grid-row: 1 / 3;
+      grid-column: 1 / 3;
+    }
+
+    @media #{$screen-medium} {
+      grid-column: 1 / 4;
+    }
+
+    @media #{$screen-large} {
+      grid-column: 1 / 5;
+      grid-row: 1 / 4;
+    }
+  }
+
+  &__caption {
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+
+    @media #{$screen-small} {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      text-align: left;
+      background-color: $color-white;
+      padding: 12px;
+    }
+
+    @media #{$screen-medium} {
+      grid-column: 3 / 5;
+    }
+
+    @media #{$screen-large} {
+      grid-column: 4 / 6;
+      grid-row: 2 / 4;
+      padding: 32px;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+
+    @media #{$screen-medium} {
+      font-size: 2.5rem;
+    }
+
+    @media #{$screen-extra-large} {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    color: $color-very-dark-gray;
+    line-height: 1.8rem;
+
+    @media #{$screen-medium} {
+      font-size: 1.1rem;
+    }
+  }
+
+  &--animate &__image {
+    animation-name: reveal-fade-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  &--animate &__caption {
+    animation-name: reveal-vertical-1;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    @media #{$screen-small} {
+      animation-name: reveal-horizontal-1;
+    }
+  }
+}

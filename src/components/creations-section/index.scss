@@ -1,0 +1,90 @@
+@import "../../variables.scss";
+
+.creations {
+  opacity: 0;
+
+  &--animate {
+    animation-name: reveal-fade-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "heading" "cards" "button";
+    gap: 32px;
+    padding: 64px 0px;
+
+    @media #{$screen-small} {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "heading button" "cards cards";
+    }
+
+    @media #{$screen-medium} {
+      gap: 64px;
+      padding: 96px 0px;
+    }
+  }
+
+  &__heading {
+    grid-area: heading;
+    justify-self: center;
+    font-size: 2rem;
+
+    @media #{$screen-small} {
+      justify-self: start;
+      align-self: center;
+    }
+
+    @media #{$screen-medium} {
+      font-size: 2.5rem;
+    }
+
+    @media #{$screen-extra-large} {
+      font-size: 3rem;
+    }
+  }
+
+  &__creation-cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    @media #{$screen-small} {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media #{$screen-medium} {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media #{$screen-large} {
+      gap: 32px;
+    }
+  }
+
+  &__button {
+    grid-area: button;
+    justify-self: center;
+    width: 128px;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $color-black;
+    background-color: transparent;
+    border: 2px solid $color-black;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    @media #{$screen-small} {
+      justify-self: end;
+    }
+  }
+}

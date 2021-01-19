@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $font-family-normal;
+  font-weight: $font-weight-normal;
+}
+
+html {
+  font-size: $font-size-normal;
+}
+
+.container {
+  height: 100%;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0px auto;
+
+  @media #{$screen-medium} {
+    width: 90%;
+  }
+}
+
+.heading {
+  font-family: $font-family-special;
+  font-weight: $font-weight-special;
+  text-transform: uppercase;
+}

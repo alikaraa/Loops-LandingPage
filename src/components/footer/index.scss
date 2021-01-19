@@ -1,0 +1,128 @@
+@import "../../variables.scss";
+
+.footer {
+  background-color: $color-black;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "links" "social" "copyright";
+    justify-items: center;
+    padding: 64px 0px;
+
+    @media #{$screen-medium} {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "logo social" "links copyright";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    @media #{$screen-medium} {
+      justify-self: start;
+      align-self: center;
+    }
+  }
+
+  &__links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0px;
+
+    @media #{$screen-medium} {
+      justify-self: start;
+      align-self: center;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+    }
+  }
+
+  &__social-links {
+    grid-area: social;
+
+    @media #{$screen-medium} {
+      justify-self: end;
+      align-self: center;
+    }
+  }
+
+  &__text {
+    grid-area: copyright;
+    padding-top: 16px;
+    color: $color-dark-gray;
+    text-align: center;
+
+    @media #{$screen-medium} {
+      justify-self: end;
+      align-self: center;
+      text-align: right;
+    }
+  }
+
+  &__link,
+  &__social-link {
+    position: relative;
+    color: $color-white;
+    text-decoration: none;
+    padding: 12px;
+
+    @media #{$screen-medium} {
+      padding: 12px 0px;
+      margin-right: 8px;
+    }
+
+    @media #{$screen-large} {
+      margin-right: 16px;
+    }
+
+    @media #{$screen-extra-large} {
+      margin-right: 24px;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      width: 0px;
+      height: 2px;
+      background-color: $color-white;
+      transition: 0.5s;
+    }
+
+    &:hover::after {
+      left: calc(50% - 16px);
+      width: 32px;
+    }
+  }
+
+  &__fm-link {
+    position: relative;
+    color: $color-white;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 0px;
+      height: 2px;
+      background-color: $color-white;
+      transition: 0.5s;
+    }
+
+    &:hover::after {
+      left: 0px;
+      width: 100%;
+    }
+  }
+}

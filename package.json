@@ -1,0 +1,36 @@
+{
+  "name": "2021-fm-loopstudios-landing-page",
+  "version": "1.0.0",
+  "description": "My implementation of Frontend Mentor's \"Loopstudios Landing Page\" challenge.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgdev1024/2021-fm-loopstudios-landing-page.git"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "loopstudios",
+    "landing",
+    "page"
+  ],
+  "author": "Dennis Griffin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgdev1024/2021-fm-loopstudios-landing-page/issues"
+  },
+  "homepage": "https://github.com/dgdev1024/2021-fm-loopstudios-landing-page#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.2"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "require-context": "^1.1.0"
+  }
+}
